@@ -169,7 +169,7 @@ ApplicationWindow {
     }
 
     Component.onCompleted: {
-        currentPage = "qml/TasksPage.qml"
+        currentPage = "TasksPage.qml"
         mainMenu.currentItem = 0
     }
 }

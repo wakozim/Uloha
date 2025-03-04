@@ -76,7 +76,7 @@ MyPage {
             }
 
             onClicked: {
-                loader.source = "qml/NewTaskPage.qml" 
+                loader.source = "NewTaskPage.qml" 
             }
         }
 

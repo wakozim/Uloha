@@ -11,7 +11,7 @@ qt_standard_project_setup(REQUIRES 6.8)
 set(sources main.cpp)
 qt_add_resources(sources images.qrc)
 
-set_source_files_properties(Palette.qml
+set_source_files_properties(qml/Palette.qml
     PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 
 qt_add_executable(appuloha
@@ -25,11 +25,11 @@ qt_add_qml_module(appuloha
     URI Uloha 
 
     QML_FILES
-        Palette.qml
-        Main.qml
-        MainMenu.qml
-        MenuIconLive.qml
-        MyPage.qml
+        qml/Palette.qml
+        qml/Main.qml
+        qml/components/MainMenu.qml
+        qml/components/MenuIconLive.qml
+        qml/components/MyPage.qml
         qml/TasksPage.qml
         qml/NewTaskPage.qml
         qml/SettingsPage.qml

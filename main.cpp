@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
     engine.rootContext()->setContextProperty("taskVM", &vm);
 
-    qmlRegisterSingletonType(QUrl("qrc:/qt/qml/Uloha/Palette.qml"), "Uloha", 1, 0, "Palette");
+    qmlRegisterSingletonType(QUrl("qrc:/qt/qml/Uloha/qml/Palette.qml"), "Uloha", 1, 0, "Palette");
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

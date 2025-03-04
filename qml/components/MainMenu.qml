@@ -17,19 +17,19 @@ Item {
             item: "page_tasks"
             title: "Tasks"
             icon: "qrc:/images/icon_game.png"
-            page: "qml/TasksPage.qml"
+            page: "TasksPage.qml"
         }
         ListElement {
             item: "settings"
             title: "Settings"
             icon: "qrc:/images/icon_settings.png"
-            page: "qml/SettingsPage.qml"
+            page: "SettingsPage.qml"
         }
         ListElement {
             item: "about"
             title: "About"
             icon: "qrc:/images/icon_info.png"
-            page: "qml/AboutPage.qml"
+            page: "AboutPage.qml"
         }
     }
 

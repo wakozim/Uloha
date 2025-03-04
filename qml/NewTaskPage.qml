@@ -33,7 +33,7 @@ MyPage {
                 if (!title) return;
                 let description1 = descriptionInput.text
                 taskVM.addTask(title, description1)
-                loader.source = "qml/TasksPage.qml" 
+                loader.source = "TasksPage.qml" 
             }
         }
     }
