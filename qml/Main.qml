@@ -155,7 +155,7 @@ ApplicationWindow {
                 id: curtainLoading
                 anchors.fill: parent
                 visible: false
-                color: "white"
+                color: "black"
                 opacity: 0.8
                 BusyIndicator {
                     anchors.centerIn: parent

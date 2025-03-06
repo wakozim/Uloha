@@ -32,26 +32,54 @@ MyPage {
     }
 
     Component {
-        id: activeTask
-        Rectangle {
+        id: activeTask 
+        SwipeDelegate {
+            text: title 
+            id: test
             width: grid.cellWidth - spacing
             height: grid.cellHeight - spacing
-            color: completed ? "#B1B1B1" : "#FF0000"
             clip: true
-            Column {
-                anchors.fill: parent
-                Text {
-                    text: title
+
+            GridView.onRemove: removeAnimation.start()
+
+            SequentialAnimation {
+                id: removeAnimation
+
+                PropertyAction {
+                    target: activeTask
+                    property: "GridView.delayRemove"
+                    value: true
                 }
-                Text {
-                    text: description;
-                    color: grid.isCurrentItem ? "red" : "black"
+                NumberAnimation {
+                    target: test 
+                    property: "width"
+                    to: 0
+                    easing.type: Easing.InOutQuad
                 }
-                CheckBox {
-                    checked: completed
-                    onClicked: taskVM.toggleCompleted(id)
+                ScriptAction {
+                    script: {
+                        taskVM.toggleCompleted(id);
+                    }
+                }
+                PropertyAction {
+                    target: activeTask
+                    property: "GridView.delayRemove"
+                    value: false
                 }
             }
+
+       swipe.right: Button {
+            text: "Delete"
+            width: height 
+            height: parent.height
+        }
+
+        swipe.onCompleted: {
+            if (swipe.position < 0) {
+                removeAnimation.start();
+            }
+        }
+
         }
     }
 

@@ -1,13 +1,12 @@
 import QtQuick
 
-//based on https://gist.github.com/cyberbobs/8d62ab257d332914a72c
 
 Item {
     id: root
     width: 24
     height: 24
 
-    property real value: 0 //from 0 to 1
+    property real value: 0 
 
     rotation: root.state === "menu" ? value*180 : -value*180
 

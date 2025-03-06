@@ -40,7 +40,7 @@ Item {
         anchors.right: parent.right
         width: parent.width
         height: width*0.5
-        color: Palette.primary //"#3078fe" //this color is equal to the background of imgLogo
+        color: Palette.primary 
         clip: true
         Image {
             id: imgLogo

@@ -12,7 +12,7 @@ public:
 
     bool init();
     QVector<Task> loadTasks();
-    bool addTask(Task &task);      // теперь возвращает id через task
+    bool addTask(Task &task); 
     bool removeTask(int id);
     bool setCompleted(int id, bool completed);
 
